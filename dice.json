@@ -1,0 +1,1835 @@
+{
+  "hqdice": {
+    "name": "HeroQuest",
+    "maxNumberOfTotalDice": 15,
+    "imageDirectory": "hqdice/transparent",
+    "regex": "^(\\d{1,2}\\s[a-zA-Z][a-zA-Z0-9]*\\b\\s?)+$",
+    "defaultDiceType": {
+      "regex": "^\\d{1,2}$",
+      "maxNumberOfDiceType": null,
+      "typeToUse": "white"
+    },
+    "diceTypes": {
+      "white": {
+        "maxNumberOfDiceType": null,
+        "aliases": [
+          "w"
+        ],
+        "faces": [
+          {
+            "face": "skull.png",
+            "numOfFaces": 3,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield.png",
+            "numOfFaces": 2,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-combat-dice-lfftlvf4"
+        }
+      },
+      "blue": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-blue.png",
+            "numOfFaces": 3,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-blue.png",
+            "numOfFaces": 1,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-blue.png",
+            "numOfFaces": 2,
+            "dddiceValue": 5,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-blue-combat-dice-lffwvlt3"
+        }
+      },
+      "orange": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "doubleskull-orange.png",
+            "numOfFaces": 2,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 2
+            }
+          },
+          {
+            "face": "doublewhiteshield-orange.png",
+            "numOfFaces": 2,
+            "dddiceValue": 3,
+            "values": {
+              "white_shields": 2
+            }
+          },
+          {
+            "face": "blackshield-orange.png",
+            "numOfFaces": 1,
+            "dddiceValue": 5,
+            "values": {
+              "black_shields": 1
+            }
+          },
+          {
+            "face": "doubleblackshield-orange.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 2
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-orange-combat-dice-lffxaqw1"
+        },
+        "aliases": [
+          "o"
+        ]
+      },
+      "green": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-green.png",
+            "numOfFaces": 2,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-green.png",
+            "numOfFaces": 3,
+            "dddiceValue": 3,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-green.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-green-combat-dice-lffz5gf7"
+        },
+        "aliases": [
+          "gr"
+        ]
+      },
+      "purple": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-purple.png",
+            "numOfFaces": 2,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "doubleskull-purple.png",
+            "numOfFaces": 1,
+            "dddiceValue": 3,
+            "values": {
+              "skulls": 2
+            }
+          },
+          {
+            "face": "whiteshield-purple.png",
+            "numOfFaces": 1,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "doublewhiteshield-purple.png",
+            "numOfFaces": 1,
+            "dddiceValue": 5,
+            "values": {
+              "white_shields": 2
+            }
+          },
+          {
+            "face": "doubleblackshield-purple.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 2
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-purple-combat-dice-lffzqsek"
+        }
+      },
+      "black": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-black.png",
+            "numOfFaces": 4,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-black.png",
+            "numOfFaces": 1,
+            "dddiceValue": 5,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-black.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-black-combat-dice-lffwqzve"
+        }
+      },
+      "yellow": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-yellow.png",
+            "numOfFaces": 1,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "doubleskull-yellow.png",
+            "numOfFaces": 1,
+            "dddiceValue": 2,
+            "values": {
+              "skulls": 2
+            }
+          },
+          {
+            "face": "whiteshield-yellow.png",
+            "numOfFaces": 1,
+            "dddiceValue": 3,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "doublewhiteshield-yellow.png",
+            "numOfFaces": 1,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 2
+            }
+          },
+          {
+            "face": "blackshield-yellow.png",
+            "numOfFaces": 1,
+            "dddiceValue": 5,
+            "values": {
+              "black_shields": 1
+            }
+          },
+          {
+            "face": "doubleblackshield-yellow.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 2
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-yellow-combat-dice-lfg05rag"
+        },
+        "aliases": [
+          "y"
+        ]
+      },
+      "red": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-red.png",
+            "numOfFaces": 3,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-red.png",
+            "numOfFaces": 2,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-red.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-red-combat-dice-lz1cecrn"
+        }
+      },
+      "pink": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-pink.png",
+            "numOfFaces": 3,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-pink.png",
+            "numOfFaces": 2,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-pink.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-pink-combat-dice-lz1clxi7"
+        }
+      },
+      "copd": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-copd.png",
+            "numOfFaces": 3,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-copd.png",
+            "numOfFaces": 2,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-copd.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "aliases": [
+          "joe"
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-crypt-of-perpetual-darkness-combat-dice-mbb79n1q"
+        }
+      },
+      "boss": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-redboss.png",
+            "numOfFaces": 1,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "doubleskull-redboss.png",
+            "numOfFaces": 2,
+            "dddiceValue": 2,
+            "values": {
+              "skulls": 2
+            }
+          },
+          {
+            "face": "doublewhiteshield-redboss.png",
+            "numOfFaces": 1,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 2
+            }
+          },
+          {
+            "face": "blackshield-redboss.png",
+            "numOfFaces": 1,
+            "dddiceValue": 5,
+            "values": {
+              "black_shields": 1
+            }
+          },
+          {
+            "face": "doubleblackshield-redboss.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 2
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-red-boss-combat-dice-m1qpq8k5"
+        }
+      },
+      "sqt": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-sqt.png",
+            "numOfFaces": 3,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-sqt.png",
+            "numOfFaces": 2,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-sqt.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-spirit-queen's-torment-combat-dice-lz1deske"
+        }
+      },
+      "pot": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-pot.png",
+            "numOfFaces": 3,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-pot.png",
+            "numOfFaces": 2,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-pot.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-prophecy-of-telor-combat-dice-lz1dmod3"
+        }
+      },
+      "fh": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-fh.png",
+            "numOfFaces": 3,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-fh.png",
+            "numOfFaces": 2,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-fh.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-frozen-horror-combat-dice-lz1d4ggg"
+        }
+      },
+      "gen": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-gen.png",
+            "numOfFaces": 3,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-gen.png",
+            "numOfFaces": 2,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-gen.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-gencon-combat-dice-lz1e930v"
+        }
+      },
+      "gen24": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-gen24.png",
+            "numOfFaces": 3,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-gen24.png",
+            "numOfFaces": 2,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-gen24.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "aliases": [
+          "dew",
+          "piss"
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-gencon-2024-combat-dice-m01rq6ia"
+        }
+      },
+      "dread": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-dread.png",
+            "numOfFaces": 3,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-dread.png",
+            "numOfFaces": 2,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-dread.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-dread-veil-combat-dice-lz1lyex4"
+        }
+      },
+      "jod": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-jod.png",
+            "numOfFaces": 3,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-jod.png",
+            "numOfFaces": 2,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-jod.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-jungles-of-delthrakk-combat-diceice-m01stff3"
+        }
+      },
+      "fl": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-fl.png",
+            "numOfFaces": 3,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-fl.png",
+            "numOfFaces": 2,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-fl.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-first-light-combat-dice-m5spwiqr"
+        }
+      }
+    },
+    "aliases": [
+      "hqroll"
+    ]
+  },
+  "scdice": {
+    "name": "Space Crusade",
+    "maxNumberOfTotalDice": 8,
+    "imageDirectory": "spacecrusade/transparent",
+    "regex": "^(\\d{1,2}\\s[a-zA-Z]+\\b\\s?)+$",
+    "defaultDiceType": null,
+    "diceTypes": {
+      "white": {
+        "maxNumberOfDiceType": 4,
+        "faces": [
+          {
+            "face": "white-1.png",
+            "numOfFaces": 1,
+            "values": {
+              "white": 1
+            }
+          },
+          {
+            "face": "white-2.png",
+            "numOfFaces": 1,
+            "values": {
+              "white": 2
+            }
+          },
+          {
+            "face": "white-0.png",
+            "numOfFaces": 4,
+            "values": {
+              "white": 0
+            }
+          }
+        ],
+        "aliases": [
+          "w"
+        ]
+      },
+      "red": {
+        "maxNumberOfDiceType": 4,
+        "faces": [
+          {
+            "face": "red-1.png",
+            "numOfFaces": 1,
+            "values": {
+              "red": 1
+            }
+          },
+          {
+            "face": "red-2.png",
+            "numOfFaces": 1,
+            "values": {
+              "red": 2
+            }
+          },
+          {
+            "face": "red-3.png",
+            "numOfFaces": 1,
+            "values": {
+              "red": 3
+            }
+          },
+          {
+            "face": "red-0.png",
+            "numOfFaces": 3,
+            "values": {
+              "red": 0
+            }
+          }
+        ],
+        "aliases": [
+          "r"
+        ]
+      }
+    },
+    "aliases": [
+      "scroll",
+      "sqroll",
+      "sqdice"
+    ]
+  },
+  "descentdice": {
+    "name": "Descent 2nd Ed.",
+    "maxNumberOfTotalDice": 10,
+    "imageDirectory": "descent/transparent",
+    "regex": "^(\\d{1,2}\\s[a-zA-Z]+\\b\\s?)+$",
+    "defaultDiceType": null,
+    "diceTypes": {
+      "red": {
+        "maxNumberOfDiceType": 2,
+        "faces": [
+          {
+            "face": "red-1heart.png",
+            "numOfFaces": 1,
+            "values": {
+              "heart": 1
+            }
+          },
+          {
+            "face": "red-2hearts.png",
+            "numOfFaces": 3,
+            "values": {
+              "heart": 2
+            }
+          },
+          {
+            "face": "red-3hearts.png",
+            "numOfFaces": 1,
+            "values": {
+              "heart": 3
+            }
+          },
+          {
+            "face": "red-3hearts-1surge.png",
+            "numOfFaces": 1,
+            "values": {
+              "heart": 3,
+              "surge": 1
+            }
+          }
+        ]
+      },
+      "blue": {
+        "maxNumberOfDiceType": 1,
+        "faces": [
+          {
+            "face": "blue-miss.png",
+            "numOfFaces": 1,
+            "values": {
+              "miss": 1
+            }
+          },
+          {
+            "face": "blue-number2-2hearts-1surge.png",
+            "numOfFaces": 1,
+            "values": {
+              "number": 2,
+              "heart": 2,
+              "surge": 1
+            }
+          },
+          {
+            "face": "blue-number3-2hearts.png",
+            "numOfFaces": 1,
+            "values": {
+              "number": 3,
+              "heart": 2
+            }
+          },
+          {
+            "face": "blue-number4-2hearts.png",
+            "numOfFaces": 1,
+            "values": {
+              "number": 4,
+              "heart": 2
+            }
+          },
+          {
+            "face": "blue-number5-1heart.png",
+            "numOfFaces": 1,
+            "values": {
+              "number": 5,
+              "heart": 1
+            }
+          },
+          {
+            "face": "blue-number6-1heart-1surge.png",
+            "numOfFaces": 1,
+            "values": {
+              "number": 6,
+              "heart": 1,
+              "surge": 1
+            }
+          }
+        ]
+      },
+      "yellow": {
+        "maxNumberOfDiceType": 2,
+        "faces": [
+          {
+            "face": "yellow-2hearts.png",
+            "numOfFaces": 1,
+            "values": {
+              "heart": 2
+            }
+          },
+          {
+            "face": "yellow-1heart-1surge.png",
+            "numOfFaces": 1,
+            "values": {
+              "heart": 1,
+              "surge": 1
+            }
+          },
+          {
+            "face": "yellow-number1-1heart.png",
+            "numOfFaces": 1,
+            "values": {
+              "number": 1,
+              "heart": 1
+            }
+          },
+          {
+            "face": "yellow-number1-1surge.png",
+            "numOfFaces": 1,
+            "values": {
+              "number": 1,
+              "surge": 1
+            }
+          },
+          {
+            "face": "yellow-number2-1heart.png",
+            "numOfFaces": 1,
+            "values": {
+              "number": 2,
+              "heart": 1
+            }
+          },
+          {
+            "face": "yellow-2hearts-1surge.png",
+            "numOfFaces": 1,
+            "values": {
+              "heart": 2,
+              "surge": 1
+            }
+          }
+        ]
+      },
+      "brown": {
+        "maxNumberOfDiceType": 1,
+        "faces": [
+          {
+            "face": "brown-blank.png",
+            "numOfFaces": 3,
+            "values": {
+              "shield": 0
+            }
+          },
+          {
+            "face": "brown-1shield.png",
+            "numOfFaces": 2,
+            "values": {
+              "shield": 1
+            }
+          },
+          {
+            "face": "brown-2shields.png",
+            "numOfFaces": 1,
+            "values": {
+              "shield": 2
+            }
+          }
+        ]
+      },
+      "gray": {
+        "maxNumberOfDiceType": 2,
+        "faces": [
+          {
+            "face": "gray-blank.png",
+            "numOfFaces": 1,
+            "values": {
+              "shield": 0
+            }
+          },
+          {
+            "face": "gray-1shield.png",
+            "numOfFaces": 3,
+            "values": {
+              "shield": 1
+            }
+          },
+          {
+            "face": "gray-2shields.png",
+            "numOfFaces": 1,
+            "values": {
+              "shield": 2
+            }
+          },
+          {
+            "face": "gray-3shields.png",
+            "numOfFaces": 1,
+            "values": {
+              "shield": 3
+            }
+          }
+        ],
+        "aliases": [
+          "grey"
+        ]
+      },
+      "black": {
+        "maxNumberOfDiceType": 1,
+        "faces": [
+          {
+            "face": "black-blank.png",
+            "numOfFaces": 1,
+            "values": {
+              "shield": 0
+            }
+          },
+          {
+            "face": "black-2shields.png",
+            "numOfFaces": 3,
+            "values": {
+              "shield": 2
+            }
+          },
+          {
+            "face": "black-3shields.png",
+            "numOfFaces": 1,
+            "values": {
+              "shield": 3
+            }
+          },
+          {
+            "face": "black-4shields.png",
+            "numOfFaces": 1,
+            "values": {
+              "shield": 4
+            }
+          }
+        ]
+      }
+    },
+    "aliases": [
+      "descentroll"
+    ]
+  },
+  "doomdice": {
+    "name": "DOOM (2016)",
+    "maxNumberOfTotalDice": 6,
+    "imageDirectory": "doom",
+    "regex": "^(\\d{1,2}\\s[a-zA-Z]+\\b\\s?)+$",
+    "defaultDiceType": null,
+    "diceTypes": {
+      "red": {
+        "maxNumberOfDiceType": 4,
+        "faces": [
+          {
+            "face": "red-blank.png",
+            "numOfFaces": 1,
+            "values": {
+              "redshot": 0
+            }
+          },
+          {
+            "face": "red-1shot.png",
+            "numOfFaces": 3,
+            "values": {
+              "redshot": 1
+            }
+          },
+          {
+            "face": "red-2shots.png",
+            "numOfFaces": 2,
+            "values": {
+              "redshot": 2
+            }
+          }
+        ]
+      },
+      "black": {
+        "maxNumberOfDiceType": 2,
+        "faces": [
+          {
+            "face": "black-1shot.png",
+            "numOfFaces": 2,
+            "values": {
+              "blackshot": 1
+            }
+          },
+          {
+            "face": "black-2shots.png",
+            "numOfFaces": 3,
+            "values": {
+              "blackshot": 2
+            }
+          },
+          {
+            "face": "black-3shots.png",
+            "numOfFaces": 1,
+            "values": {
+              "blackshot": 3
+            }
+          }
+        ]
+      }
+    },
+    "aliases": [
+      "doomroll"
+    ]
+  },
+  "drgdice": {
+    "name": "Deep Rock Galactic",
+    "maxNumberOfTotalDice": 3,
+    "imageDirectory": "drg/transparent",
+    "regex": "^(\\d{1,2}\\s[a-zA-Z]+\\b\\s?)+$",
+    "defaultDiceType": null,
+    "diceTypes": {
+      "red": {
+        "maxNumberOfDiceType": 2,
+        "faces": [
+          {
+            "face": "red-1explosion.png",
+            "numOfFaces": 3,
+            "values": {
+              "red-explosion": 1
+            }
+          },
+          {
+            "face": "red-2explosions.png",
+            "numOfFaces": 2,
+            "values": {
+              "red-explosion": 2
+            }
+          },
+          {
+            "face": "red-movecreature.png",
+            "numOfFaces": 1,
+            "values": {
+              "red-move-creature": 1
+            }
+          }
+        ]
+      },
+      "blue": {
+        "maxNumberOfDiceType": 2,
+        "faces": [
+          {
+            "face": "blue-1piercing.png",
+            "numOfFaces": 3,
+            "values": {
+              "blue-piercing": 1
+            }
+          },
+          {
+            "face": "blue-2piercing.png",
+            "numOfFaces": 2,
+            "values": {
+              "blue-piercing": 2
+            }
+          },
+          {
+            "face": "blue-blank.png",
+            "numOfFaces": 1,
+            "values": {
+              "blue-piercing": 0
+            }
+          }
+        ]
+      },
+      "yellow": {
+        "maxNumberOfDiceType": 3,
+        "faces": [
+          {
+            "face": "yellow-1flame.png",
+            "numOfFaces": 3,
+            "values": {
+              "yellow-flame": 1
+            }
+          },
+          {
+            "face": "yellow-2flames.png",
+            "numOfFaces": 1,
+            "values": {
+              "yellow-flame": 2
+            }
+          },
+          {
+            "face": "yellow-blank.png",
+            "numOfFaces": 2,
+            "values": {
+              "yellow-flame": 0
+            }
+          }
+        ]
+      },
+      "green": {
+        "maxNumberOfDiceType": 3,
+        "faces": [
+          {
+            "face": "green-bullet.png",
+            "numOfFaces": 4,
+            "values": {
+              "green-bullet": 1
+            }
+          },
+          {
+            "face": "green-blank.png",
+            "numOfFaces": 2,
+            "values": {
+              "green-bullet": 0
+            }
+          }
+        ]
+      },
+      "gray": {
+        "maxNumberOfDiceType": 1,
+        "faces": [
+          {
+            "face": "gold-gold.png",
+            "numOfFaces": 2,
+            "values": {
+              "mineral-die-gold": 1
+            }
+          },
+          {
+            "face": "gold-nitra.png",
+            "numOfFaces": 2,
+            "values": {
+              "mineral-die-nitra": 1
+            }
+          },
+          {
+            "face": "gold-blank.png",
+            "numOfFaces": 2,
+            "values": {
+              "mineral-die-blank": 1
+            }
+          }
+        ],
+        "aliases": [
+          "grey",
+          "gold"
+        ]
+      },
+      "white": {
+        "maxNumberOfDiceType": 2,
+        "faces": [
+          {
+            "face": "white-1pickaxe.png",
+            "numOfFaces": 3,
+            "values": {
+              "pickaxe": 1
+            }
+          },
+          {
+            "face": "white-2pickaxes.png",
+            "numOfFaces": 2,
+            "values": {
+              "pickaxe": 2
+            }
+          },
+          {
+            "face": "white-blank.png",
+            "numOfFaces": 1,
+            "values": {
+              "pickaxe": 0
+            }
+          }
+        ]
+      },
+      "black": {
+        "maxNumberOfDiceType": 2,
+        "faces": [
+          {
+            "face": "black-damage.png",
+            "numOfFaces": 3,
+            "values": {
+              "enemy-damage": 1
+            }
+          },
+          {
+            "face": "black-specialeffect.png",
+            "numOfFaces": 2,
+            "values": {
+              "enemy-special-effect": 1
+            }
+          },
+          {
+            "face": "black-blank.png",
+            "numOfFaces": 1,
+            "values": {
+              "enemy-miss": 1
+            }
+          }
+        ]
+      }
+    },
+    "aliases": [
+      "drgroll"
+    ]
+  },
+  "oqdice": {
+    "name": "OrcQuest: Warpath",
+    "maxNumberOfTotalDice": 20,
+    "imageDirectory": "oqdice",
+    "regex": "^(\\d{1,2}\\s[a-zA-Z]+\\b\\s?)+$",
+    "defaultDiceType": null,
+    "diceTypes": {
+      "whiteattack": {
+        "maxNumberOfDiceType": 3,
+        "faces": [
+          {
+            "face": "white-attack-yellow.png",
+            "numOfFaces": 4,
+            "values": {
+              "yellow-attack": 1
+            }
+          },
+          {
+            "face": "white-attack-orange.png",
+            "numOfFaces": 2,
+            "values": {
+              "orange-attack": 1
+            }
+          }
+        ],
+        "aliases": [
+          "wa"
+        ]
+      },
+      "whitedefend": {
+        "maxNumberOfDiceType": 3,
+        "faces": [
+          {
+            "face": "white-defend-blank.png",
+            "numOfFaces": 2,
+            "values": {
+              "blank-defend": 1
+            }
+          },
+          {
+            "face": "white-defend-yellow.png",
+            "numOfFaces": 3,
+            "values": {
+              "yellow-defend": 1
+            }
+          },
+          {
+            "face": "white-defend-orange.png",
+            "numOfFaces": 1,
+            "values": {
+              "orange-defend": 1
+            }
+          }
+        ],
+        "aliases": [
+          "wd"
+        ]
+      },
+      "grayattack": {
+        "maxNumberOfDiceType": 3,
+        "faces": [
+          {
+            "face": "grey-attack-yellow.png",
+            "numOfFaces": 3,
+            "values": {
+              "yellow-attack": 1
+            }
+          },
+          {
+            "face": "grey-attack-orange.png",
+            "numOfFaces": 2,
+            "values": {
+              "orange-attack": 1
+            }
+          },
+          {
+            "face": "grey-attack-red.png",
+            "numOfFaces": 1,
+            "values": {
+              "red-attack": 1
+            }
+          }
+        ],
+        "aliases": [
+          "greyattack",
+          "ga"
+        ]
+      },
+      "graydefend": {
+        "maxNumberOfDiceType": 3,
+        "faces": [
+          {
+            "face": "grey-defend-blank.png",
+            "numOfFaces": 2,
+            "values": {
+              "blank-defend": 1
+            }
+          },
+          {
+            "face": "grey-defend-yellow.png",
+            "numOfFaces": 1,
+            "values": {
+              "yellow-defend": 1
+            }
+          },
+          {
+            "face": "grey-defend-orange.png",
+            "numOfFaces": 3,
+            "values": {
+              "orange-defend": 1
+            }
+          }
+        ],
+        "aliases": [
+          "greydefend",
+          "gd"
+        ]
+      },
+      "blackattack": {
+        "maxNumberOfDiceType": 3,
+        "faces": [
+          {
+            "face": "black-attack-orange.png",
+            "numOfFaces": 3,
+            "values": {
+              "orange-attack": 1
+            }
+          },
+          {
+            "face": "black-attack-red.png",
+            "numOfFaces": 3,
+            "values": {
+              "red-attack": 1
+            }
+          }
+        ],
+        "aliases": [
+          "ba"
+        ]
+      },
+      "blackdefend": {
+        "maxNumberOfDiceType": 3,
+        "faces": [
+          {
+            "face": "black-defend-blank.png",
+            "numOfFaces": 2,
+            "values": {
+              "blank-defend": 1
+            }
+          },
+          {
+            "face": "black-defend-orange.png",
+            "numOfFaces": 2,
+            "values": {
+              "orange-defend": 1
+            }
+          },
+          {
+            "face": "black-defend-red.png",
+            "numOfFaces": 2,
+            "values": {
+              "red-defend": 1
+            }
+          }
+        ],
+        "aliases": [
+          "bd"
+        ]
+      },
+      "greenbadass": {
+        "maxNumberOfDiceType": 4,
+        "faces": [
+          {
+            "face": "badass-green-skull.png",
+            "numOfFaces": 3,
+            "values": {
+              "skull-badass": 1
+            }
+          },
+          {
+            "face": "badass-green-lightning-bolt.png",
+            "numOfFaces": 2,
+            "values": {
+              "lightning-bolt-badass": 1
+            }
+          },
+          {
+            "face": "badass-green-explosion.png",
+            "numOfFaces": 1,
+            "values": {
+              "explosion-badass": 1
+            }
+          }
+        ],
+        "aliases": [
+          "gba"
+        ]
+      },
+      "bluebadass": {
+        "maxNumberOfDiceType": 4,
+        "faces": [
+          {
+            "face": "badass-blue-skull.png",
+            "numOfFaces": 3,
+            "values": {
+              "skull-badass": 1
+            }
+          },
+          {
+            "face": "badass-blue-lightning-bolt.png",
+            "numOfFaces": 2,
+            "values": {
+              "lightning-bolt-badass": 1
+            }
+          },
+          {
+            "face": "badass-blue-explosion.png",
+            "numOfFaces": 1,
+            "values": {
+              "explosion-badass": 1
+            }
+          }
+        ],
+        "aliases": [
+          "bba"
+        ]
+      }
+    },
+    "aliases": [
+      "oqroll"
+    ]
+  },
+  "hqmove": {
+    "name": "HeroQuest Movement",
+    "maxNumberOfTotalDice": 6,
+    "imageDirectory": "hqdice/transparent",
+    "regex": "^(\\d{1,2}\\s[a-zA-Z][a-zA-Z0-9]*\\b\\s?)+$",
+    "defaultDiceType": {
+      "regex": "^\\d{1,2}$",
+      "maxNumberOfDiceType": null,
+      "typeToUse": "red"
+    },
+    "diceTypes": {
+      "red": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "1-red.png",
+            "numOfFaces": 1,
+            "dddiceValue": 1,
+            "values": {
+              "movement": 1
+            }
+          },
+          {
+            "face": "2-red.png",
+            "numOfFaces": 1,
+            "dddiceValue": 2,
+            "values": {
+              "movement": 2
+            }
+          },
+          {
+            "face": "3-red.png",
+            "numOfFaces": 1,
+            "dddiceValue": 3,
+            "values": {
+              "movement": 3
+            }
+          },
+          {
+            "face": "4-red.png",
+            "numOfFaces": 1,
+            "dddiceValue": 4,
+            "values": {
+              "movement": 4
+            }
+          },
+          {
+            "face": "5-red.png",
+            "numOfFaces": 1,
+            "dddiceValue": 5,
+            "values": {
+              "movement": 5
+            }
+          },
+          {
+            "face": "6-red.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "movement": 6
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-red-movement-dice-lfhfjiff"
+        }
+      },
+      "blue": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "1-blue.png",
+            "numOfFaces": 1,
+            "dddiceValue": 1,
+            "values": {
+              "movement": 1
+            }
+          },
+          {
+            "face": "2-blue.png",
+            "numOfFaces": 1,
+            "dddiceValue": 2,
+            "values": {
+              "movement": 2
+            }
+          },
+          {
+            "face": "3-blue.png",
+            "numOfFaces": 1,
+            "dddiceValue": 3,
+            "values": {
+              "movement": 3
+            }
+          },
+          {
+            "face": "4-blue.png",
+            "numOfFaces": 1,
+            "dddiceValue": 4,
+            "values": {
+              "movement": 4
+            }
+          },
+          {
+            "face": "5-blue.png",
+            "numOfFaces": 1,
+            "dddiceValue": 5,
+            "values": {
+              "movement": 5
+            }
+          },
+          {
+            "face": "6-blue.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "movement": 6
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-blue-movement-dice-lfhhootl"
+        }
+      },
+      "black": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "1-black.png",
+            "numOfFaces": 1,
+            "dddiceValue": 1,
+            "values": {
+              "movement": 1
+            }
+          },
+          {
+            "face": "2-black.png",
+            "numOfFaces": 1,
+            "dddiceValue": 2,
+            "values": {
+              "movement": 2
+            }
+          },
+          {
+            "face": "3-black.png",
+            "numOfFaces": 1,
+            "dddiceValue": 3,
+            "values": {
+              "movement": 3
+            }
+          },
+          {
+            "face": "4-black.png",
+            "numOfFaces": 1,
+            "dddiceValue": 4,
+            "values": {
+              "movement": 4
+            }
+          },
+          {
+            "face": "5-black.png",
+            "numOfFaces": 1,
+            "dddiceValue": 5,
+            "values": {
+              "movement": 5
+            }
+          },
+          {
+            "face": "6-black.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "movement": 6
+            }
+          }
+        ],
+        "aliases": [
+          "joe"
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-black-movement-dice-mbb6ffc0"
+        }
+      },
+      "fl": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "1-fl.png",
+            "numOfFaces": 1,
+            "dddiceValue": 1,
+            "values": {
+              "movement": 1
+            }
+          },
+          {
+            "face": "2-fl.png",
+            "numOfFaces": 1,
+            "dddiceValue": 2,
+            "values": {
+              "movement": 2
+            }
+          },
+          {
+            "face": "3-fl.png",
+            "numOfFaces": 1,
+            "dddiceValue": 3,
+            "values": {
+              "movement": 3
+            }
+          },
+          {
+            "face": "4-fl.png",
+            "numOfFaces": 1,
+            "dddiceValue": 4,
+            "values": {
+              "movement": 4
+            }
+          },
+          {
+            "face": "5-fl.png",
+            "numOfFaces": 1,
+            "dddiceValue": 5,
+            "values": {
+              "movement": 5
+            }
+          },
+          {
+            "face": "6-fl.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "movement": 6
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-first-light-movement-dice-m5sp3203"
+        }
+      }
+    },
+    "aliases": [
+      "hqmovement"
+    ]
+  },
+  "rollcolor": {
+    "aliases": ["rollcolour"],
+    "name": "Random Color",
+    "maxNumberOfTotalDice": 1,
+    "imageDirectory": "blankcolors",
+    "regex": "^1 random$",
+    "defaultDiceType": {
+      "regex": "^(?:1)?$",
+      "maxNumberOfDiceType": 1,
+      "typeToUse": "random"
+    },
+    "diceTypes": {
+      "random": {
+        "maxNumberOfDiceType": 1,
+        "faces": [
+          {
+            "face": "black.png",
+            "numOfFaces": 1
+          },
+          {
+            "face": "blackshield-purple.png",
+            "numOfFaces": 1
+          },
+          {
+            "face": "blue.png",
+            "numOfFaces": 1
+          },
+          {
+            "face": "green.png",
+            "numOfFaces": 1
+          },
+          {
+            "face": "orange.png",
+            "numOfFaces": 1
+          },
+          {
+            "face": "pink.png",
+            "numOfFaces": 1
+          },
+          {
+            "face": "yellow.png",
+            "numOfFaces": 1
+          }
+        ]
+      }
+    }
+  }
+}

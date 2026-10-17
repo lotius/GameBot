@@ -1,0 +1,44 @@
+2x red dice, red background white symbols
+-----------------------------------------
+1x 1 heart
+3x 2 hearts
+1x 3 hearts
+1x 3 hearts, 1 surge
+
+1x blue dice, blue background white symbols
+-------------------------------------------
+1x X miss
+1x #2, 2 hearts, 1 surge
+1x #3, 2 hearts
+1x #4, 2 hearts
+1x #5, 1 heart
+1x #6, 1 heart, 1 surge
+
+2x yellow dice, yellow background black symbols
+-----------------------------------------------
+1x 2 hearts
+1x 1 heart, 1 surge
+1x #1, 1 heart
+1x #1, 1 surge
+1x #2, 1 heart
+1x 2 hearts, 1 surge
+
+1x brown dice, brown background white symbols
+---------------------------------------------
+3x blank
+2x 1 shield
+1x 2 shields
+
+2x gray dice, gray background black symbols
+-------------------------------------------
+1x blank
+3x 1 shield
+1x 2 shields
+1x 3 shields
+
+1x black dice, black background white symbols
+---------------------------------------------
+1x blank
+3x 2 shields
+1x 3 shields
+1x 4 shields

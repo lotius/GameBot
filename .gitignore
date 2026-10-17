@@ -1,0 +1,16 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.sql.gz
+*.sqlite*
+/backups/
+
+# Environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+node_modules/
+*.code-workspace
+images/**/results.png
