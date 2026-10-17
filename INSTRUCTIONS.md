@@ -35,7 +35,6 @@ DB_NAME=your-full-database-name
 DB_USER=your-database-user
 DB_PASSWORD="your-database-password"
 INTEGRATION_ENCRYPTION_KEY=your-existing-encryption-key
-DDDICE_API_KEY=
 ```
 
 Use the hostname alone for `DB_HOST`; specify the port separately. A properly
@@ -46,7 +45,7 @@ An encryption key has already been generated in this project's `.env`.
 Preserve that same key across deployments: it decrypts the dddice credentials
 in MariaDB. Keep a private backup of it alongside database backups. Do not
 regenerate it when restarting or moving the bot. If it is lost, stored API
-keys need to be entered again. The optional plaintext host fallback is protected by the private `.env`, rather than stored encrypted in MariaDB.
+keys need to be entered again.
 
 For an entirely fresh installation without encrypted credentials, generate
 an encryption key after installing dependencies:
@@ -138,15 +137,6 @@ Test in an enabled dice channel:
 !stats roll
 !stats hqroll
 ```
-
-### Optional host-level dddice key
-
-`DDDICE_API_KEY` has been added as an empty entry in `.env`. You may put your
-key there privately and restart the bot. It is used only for enabled
-integrations/channels where no encrypted per-server key is stored. The same
-host key can therefore serve multiple configured servers. For separate server
-accounts use `/dddice-key`; those stored keys always take precedence. The host
-fallback is not copied into MariaDB or audit records.
 
 ## 6. Configure dddice for a server
 
@@ -338,7 +328,7 @@ There is no automatic allowlist: channels allow rolls until explicitly off.
 
 **What it does:** Enables the server-level dddice integration.
 
-**How and why to use it:** Use after configuring a private per-server key or the host fallback key. Only channels with forwarding enabled are affected. Supported dice also need theme mappings.
+**How and why to use it:** Use after configuring a private per-server key using `/dddice-key`. Only channels with forwarding enabled are affected. Supported dice also need theme mappings.
 
 ### `/setup dddice action:off`
 
@@ -350,13 +340,13 @@ There is no automatic allowlist: channels allow rolls until explicitly off.
 
 **What it does:** Opens a private modal to save or replace this server's dddice API key.
 
-**How and why to use it:** Requires Manage Server. The key is encrypted before storage and the confirmation is private. It takes precedence over `DDDICE_API_KEY` in the host environment. It does not enable forwarding or verify room access. Never enter a key in a public prefix message.
+**How and why to use it:** Requires Manage Server. The key is encrypted before storage and the confirmation is private. It does not enable forwarding or verify room access. Never enter a key in a public prefix message.
 
 ### `/setup status`
 
 **What it does:** Displays this channel's roll and dddice settings plus server logging, integration, spam, and retention settings.
 
-**How and why to use it:** Run it in the channel you want to inspect. Keys appear only as configured, host fallback, or unset; their values are never shown. Use `/setup instructions action:status` separately for the news destination.
+**How and why to use it:** Run it in the channel you want to inspect. Saved server keys appear only as configured or unset; their values are never shown. Use `/setup instructions action:status` separately for the news destination.
 
 ### Retention schedule and scope
 
@@ -599,8 +589,8 @@ The database migration has already been applied locally; run
 Use `/setup dddice-test` to check the key and room configured for the current
 channel, or select the optional `channel` field to test another channel in
 this server. Manage Server or the bot administrator role is required.
-Responses are private. The test uses the saved per-server key first, then
-the host fallback, and checks authenticated room-list and selected-room reads.
+Responses are private. The test uses the saved per-server key and checks authenticated room-list
+and selected-room reads.
 It does not send a roll, change settings, or expose the API key.
 
 Errors distinguish missing/decryption-failed keys, rejected keys, inaccessible
@@ -1049,3 +1039,26 @@ for accurate matching, but they are never included in user-facing player
 labels or exports. Departed/unavailable members get a descriptive label.
 Names are resolved when the report is requested and may change between
 exports; people with identical display names are not distinguished by ID.
+
+## Standard roll options
+
+`!dice` is an alias for `!roll`. Use `!help roll` for in-bot help.
+
+| Feature | Example | Result |
+| --- | --- | --- |
+| Mixed dice and modifiers | `!roll 2d6 + d8 + 3` | Sum dice and modifier; subtraction also works |
+| Advantage / disadvantage | `!roll d20+5 adv` / `!roll d20 dis` | Roll two d20 and keep higher / lower |
+| Keep highest / lowest | `!roll 4d6kh3` / `!roll 4d6kl2` | Keep three highest / two lowest |
+| Labels | `!roll d20+5 Stealth` | Add a label, up to 80 characters, starting with a letter |
+| Count successes | `!roll 6d6>=5` | Count kept dice showing at least five |
+| Exploding dice | `!roll 3d6!` | Roll again on a maximum; at most 20 extra dice per command |
+
+Limits: 10 starting dice total, 1?100 sides each. Exploding d1 is rejected.
+Keep rules apply to whole explosion chains, ranked by their sums. Success counting
+counts individual kept dice, including explosions, and cannot use modifiers or
+subtraction. Put `adv`/`dis` after the full expression, then `>=target` if used,
+then a label. Example: `!roll d20+5 adv Stealth`.
+Discarded dice are crossed out; natural d20 ones and twenties are bold.
+History records kept dice and stores discarded dice and roll options in the
+roll definition. Statistical face comparisons for keep rules and explosions
+reflect these selection rules and should not be interpreted as fairness tests.

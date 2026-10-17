@@ -54,7 +54,7 @@ class StatisticsStore:
                     for game, kind, snapshot, count in definitions:
                         data = json.loads(snapshot)
                         if game == 'standard':
-                            faces = [{'id': str(value), 'numOfFaces': 1} for value in range(1, data['sides'] + 1)]
+                            faces = [{'id': str(value), 'numOfFaces': 1} for value in range(1, int(kind[1:]) + 1)]
                         else:
                             faces = data['diceTypes'][kind]['faces']
                         total = sum(face['numOfFaces'] for face in faces)
