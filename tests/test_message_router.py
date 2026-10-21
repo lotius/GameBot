@@ -65,3 +65,12 @@ class RouterTests(unittest.IsolatedAsyncioTestCase):
         texts = [call.args[0] for call in self.message.channel.send.call_args_list]
         self.assertTrue(all(len(text) <= 1900 for text in texts))
         self.assertEqual(''.join(texts), 'x' * 4500)
+
+    async def test_stats_dispatches_to_statistics_handler(self):
+        self.message.content = '!stats help'
+        store = Mock()
+        services = SimpleNamespace(store=store, policy=AsyncMock(return_value={}),
+                                   admit=Mock(return_value=True))
+        await dispatch_message(self.message, store, services)
+        embed = self.message.channel.send.call_args.kwargs['embed']
+        self.assertEqual(embed.title, 'Statistics commands')

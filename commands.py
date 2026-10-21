@@ -6,6 +6,7 @@ import logging
 import asyncio
 
 from boardgamedice import dice_sets, generate_help, resolve_game, roll_board_game_dice
+from statistics_commands import show_statistics
 
 MAX_ROLL_DICE = 10
 MAX_ROLL_SIDES = 100
@@ -50,7 +51,7 @@ async def process_command(message, command, param, services=None, policy_overrid
             return
     result = None
     if command == 'stats' and services is not None:
-        await stats(message, param, services.store)
+        await show_statistics(message, param, services.store)
     elif command == 'help':
         await help(message, param)
     elif command in ('roll', 'dice'):
