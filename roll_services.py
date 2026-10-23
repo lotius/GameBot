@@ -21,8 +21,10 @@ def dddice_payload(roll, destination):
     for result in roll['results']:
         mapping = result.get('dddice')
         if not mapping:
-            raise ValueError(f"No dddice theme configured for {result['dice_type']}.")
+            continue
         dice.append({'type': mapping['type'], 'theme': mapping['theme'], 'value': str(mapping['value'])})
+    if not dice:
+        return None
     return {'room': destination, 'dice': dice, 'label': f"{roll['game']} roll (modifier {roll['modifier']:+d})"}
 
 
@@ -77,10 +79,12 @@ def test_dddice_connection(policy):
 
 def forward_dddice(policy, roll):
     destination = policy['destination'] or policy['default_destination']
+    payload = dddice_payload(roll, destination)
+    if payload is None:
+        return
     if not destination:
         raise ValueError('dddice needs an API key and destination room.')
     key = integration_key(policy)
-    payload = dddice_payload(roll, destination)
     response = requests.post('https://dddice.com/api/1.0/roll', json=payload,
         headers={'Authorization': 'Bearer ' + key, 'Accept': 'application/json'}, timeout=15)
     if not response.ok:

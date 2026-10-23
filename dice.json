@@ -759,7 +759,11 @@
         ],
         "aliases": [
           "w"
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "space-crusade-white-dice-lfgd1lnu"
+        }
       },
       "red": {
         "maxNumberOfDiceType": 4,
@@ -795,7 +799,11 @@
         ],
         "aliases": [
           "r"
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "space-crusade-red-dice-lfgczoch"
+        }
       }
     },
     "aliases": [
@@ -843,7 +851,11 @@
               "surge": 1
             }
           }
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "descent-2e-red-dice-ljkvciqm"
+        }
       },
       "blue": {
         "maxNumberOfDiceType": 1,
@@ -897,7 +909,11 @@
               "surge": 1
             }
           }
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "descent-2e-blue-ljkv2gfc"
+        }
       },
       "yellow": {
         "maxNumberOfDiceType": 2,
@@ -949,7 +965,11 @@
               "surge": 1
             }
           }
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "descent-2e-yellow-dice-ljkuxxax"
+        }
       },
       "brown": {
         "maxNumberOfDiceType": 1,
@@ -975,7 +995,11 @@
               "shield": 2
             }
           }
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "descent-2e-brown-dice-ljkvk8pv"
+        }
       },
       "gray": {
         "maxNumberOfDiceType": 2,
@@ -1011,7 +1035,11 @@
         ],
         "aliases": [
           "grey"
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "descent-2e-gray-dice-ljkvtp9h"
+        }
       },
       "black": {
         "maxNumberOfDiceType": 1,
@@ -1044,7 +1072,11 @@
               "shield": 4
             }
           }
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "descent-2-black-dice-ljkw0k2s"
+        }
       }
     },
     "aliases": [
@@ -1333,7 +1365,11 @@
         ],
         "aliases": [
           "wa"
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "orcquest-white-attack-dice-m01tzxb7"
+        }
       },
       "whitedefend": {
         "maxNumberOfDiceType": 3,
@@ -1362,7 +1398,11 @@
         ],
         "aliases": [
           "wd"
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "orcquest-white-defense-dice-m254pnkr"
+        }
       },
       "grayattack": {
         "maxNumberOfDiceType": 3,
@@ -1392,7 +1432,11 @@
         "aliases": [
           "greyattack",
           "ga"
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "orcquest-grey-attack-dice-m01u0yol"
+        }
       },
       "graydefend": {
         "maxNumberOfDiceType": 3,
@@ -1422,7 +1466,11 @@
         "aliases": [
           "greydefend",
           "gd"
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "orcquest-grey-defense-dice-m254zws5"
+        }
       },
       "blackattack": {
         "maxNumberOfDiceType": 3,
@@ -1444,7 +1492,11 @@
         ],
         "aliases": [
           "ba"
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "orcquest-black-attack-dice-m01u65vk"
+        }
       },
       "blackdefend": {
         "maxNumberOfDiceType": 3,
@@ -1473,7 +1525,11 @@
         ],
         "aliases": [
           "bd"
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "orcquest-black-defense-dice-m255a3eu"
+        }
       },
       "greenbadass": {
         "maxNumberOfDiceType": 4,
@@ -1502,7 +1558,11 @@
         ],
         "aliases": [
           "gba"
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "orcquest-green-badass-dice-m255maun"
+        }
       },
       "bluebadass": {
         "maxNumberOfDiceType": 4,
@@ -1531,7 +1591,11 @@
         ],
         "aliases": [
           "bba"
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "orcquest-blue-badass-dice-m255tcyh"
+        }
       }
     },
     "aliases": [
