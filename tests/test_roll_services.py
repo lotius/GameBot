@@ -99,8 +99,27 @@ class EncryptionTests(unittest.TestCase):
             self.assertEqual(post.call_args.kwargs['headers']['Authorization'], 'Bearer private-test-key')
 
     def test_unmapped_dice_do_not_send_incorrect_results(self):
-        with self.assertRaises(ValueError):
-            dddice_payload({'results': [{'dice_type': 'other'}], 'modifier': 0}, 'room')
+        policy = dict(destination=None, default_destination=None)
+        for mapping in ({}, {'dddice': None}, {'dddice': {}}):
+            roll = dict(game='test', modifier=0, results=[dict(dice_type='other', **mapping)])
+            with self.subTest(mapping=mapping), patch('roll_services.requests.post') as post, \
+                    patch('roll_services.integration_key') as key:
+                self.assertIsNone(dddice_payload(roll, 'room'))
+                forward_dddice(policy, roll)
+                post.assert_not_called()
+                key.assert_not_called()
+
+    def test_mixed_roll_only_sends_mapped_dice(self):
+        policy = dict(destination='room', default_destination=None)
+        roll = dict(game='test', modifier=0, results=[
+            dict(dice_type='other'),
+            dict(dice_type='red', dddice=dict(type='d6', theme='test-theme', value=4)),
+        ])
+        with patch('roll_services.integration_key', return_value='test-key'), \
+                patch('roll_services.requests.post', return_value=SimpleNamespace(ok=True)) as post:
+            forward_dddice(policy, roll)
+        self.assertEqual(post.call_args.kwargs['json']['dice'], [
+            dict(type='d6', theme='test-theme', value='4')])
 
     def test_duplicate_roll_does_not_append_new_results(self):
         connection = Mock()
