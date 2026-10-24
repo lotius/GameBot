@@ -752,6 +752,39 @@
           "type": "d6",
           "theme": "heroquest-first-light-fanroll-combat-dice-mvmy42h6"
         }
+      },
+      "wom": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-wom.png",
+            "numOfFaces": 3,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-wom.png",
+            "numOfFaces": 2,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-wom.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-wizards-of-morcar-fanroll-combat-dice-mvmz5s1r"
+        }
       }
     },
     "aliases": [
