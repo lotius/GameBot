@@ -1114,7 +1114,11 @@
               "redshot": 2
             }
           }
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "doom-(2016)-board-game-red-combat-dice-mvmwma63"
+        }
       },
       "black": {
         "maxNumberOfDiceType": 2,
@@ -1140,7 +1144,11 @@
               "blackshot": 3
             }
           }
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "doom-(2016)-board-game-black-combat-dice-mvmwr59v"
+        }
       }
     },
     "aliases": [
@@ -1178,7 +1186,11 @@
               "red-move-creature": 1
             }
           }
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "deep-rock-galactic-red-attack-dice-(explosive)-mvmvkkaa"
+        }
       },
       "blue": {
         "maxNumberOfDiceType": 2,
@@ -1204,7 +1216,11 @@
               "blue-piercing": 0
             }
           }
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "deep-rock-galactic-blue-attack-dice-(piercing)-mvmv5hnz"
+        }
       },
       "yellow": {
         "maxNumberOfDiceType": 3,
@@ -1230,7 +1246,11 @@
               "yellow-flame": 0
             }
           }
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "deep-rock-galactic-yellow-attack-dice-(flame)-mvmvpwnh"
+        }
       },
       "green": {
         "maxNumberOfDiceType": 3,
@@ -1249,7 +1269,11 @@
               "green-bullet": 0
             }
           }
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "deep-rock-galactic-green-attack-dice-(standard-bullet)-mvmvd1o1"
+        }
       },
       "gray": {
         "maxNumberOfDiceType": 1,
@@ -1279,7 +1303,11 @@
         "aliases": [
           "grey",
           "gold"
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "deep-rock-galactic-mineral-dice-mvmw4qe0"
+        }
       },
       "white": {
         "maxNumberOfDiceType": 2,
@@ -1305,7 +1333,11 @@
               "pickaxe": 0
             }
           }
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "deep-rock-galactic-pickaxe-dice-mvmvwe1s"
+        }
       },
       "black": {
         "maxNumberOfDiceType": 2,
@@ -1331,7 +1363,11 @@
               "enemy-miss": 1
             }
           }
-        ]
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "deep-rock-galactic-monster-dice-mvmwaps4"
+        }
       }
     },
     "aliases": [
