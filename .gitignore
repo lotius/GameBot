@@ -9,6 +9,7 @@
 # Environments and generated files
 .venv/
 venv/
+output
 __pycache__/
 *.py[cod]
 node_modules/
