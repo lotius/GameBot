@@ -28,7 +28,7 @@ class ServiceTests(unittest.IsolatedAsyncioTestCase):
         self.assertIn('**4**', self.message.channel.send.call_args.args[0])
 
     async def test_board_roll_records_the_displayed_faces_and_definition(self):
-        with patch('boardgamedice.random.choice', return_value='skull.png'):
+        with patch('boardgamedice.random.randint', return_value=1):
             await commands.process_command(self.message, 'hqroll', '2', self.service)
         roll = self.service.completed.call_args.args[1]
         self.assertEqual([die['values'] for die in roll['results']], [{'skulls': 1}, {'skulls': 1}])

@@ -54,15 +54,45 @@ class DiceTests(unittest.TestCase):
                 weighted = [face['face'] for face in die['faces'] for _ in range(face['numOfFaces'])]
                 for filename in set(weighted):
                     with self.subTest(game=game, die=name, face=filename):
-                        with patch.object(board.random, 'choice', return_value=filename) as choice:
+                        with patch.object(board.random, 'choice', return_value=filename), patch.object(
+                            board.random, 'randint', return_value=weighted.index(filename) + 1
+                        ):
                             stream = board.render_roll(game, {name: 1})
-                        choice.assert_called_once_with(weighted)
                         image = cv2.imdecode(np.frombuffer(stream.getvalue(), np.uint8), cv2.IMREAD_UNCHANGED)
                         original = cv2.imread(str(board.ROOT / 'images' / data['imageDirectory'] / filename), cv2.IMREAD_UNCHANGED)
                         self.assertEqual(image.shape, (100, 108, 4))
                         np.testing.assert_array_equal(image[:, :, :3], original[:, :, :3])
                         expected_alpha = original[:, :, 3] if original.shape[2] == 4 else np.full((100, 108), 255)
                         np.testing.assert_array_equal(image[:, :, 3], expected_alpha)
+
+    def test_every_physical_face_is_preserved_for_dddice(self):
+        for game, data in board.dice_sets.items():
+            if game == 'rollcolor':
+                continue
+            for name, die in data['diceTypes'].items():
+                expected_faces = [face for face in die['faces'] for _ in range(face['numOfFaces'])]
+                count = len(expected_faces)
+                outcomes = []
+                with self.subTest(game=game, die=name), patch.object(
+                    board.random, 'randint', side_effect=range(1, count + 1)
+                ):
+                    board.render_roll(game, {name: count}, outcomes)
+                    forwarded = [result['dddice'] for result in outcomes]
+                    self.assertEqual([d['value'] for d in forwarded], list(range(1, count + 1)))
+                    self.assertEqual(count, int(die['dddice']['type'][1:]))
+                    for result, face in zip(outcomes, expected_faces):
+                        self.assertEqual(result['face_id'], face.get('id', face['face']))
+                        self.assertEqual(result['values'], face.get('values', {}))
+                    self.assertTrue(all(d['theme'] == die['dddice']['theme'] for d in forwarded))
+
+    def test_rollcolor_keeps_symbol_selection_without_forwarding(self):
+        outcomes = []
+        face = board.dice_sets['rollcolor']['diceTypes']['random']['faces'][0]
+        with patch.object(board.random, 'choice', return_value=face['face']) as choice, patch.object(board.random, 'randint') as number:
+            board.render_roll('rollcolor', {'random': 1}, outcomes)
+        choice.assert_called_once()
+        number.assert_not_called()
+        self.assertNotIn('dddice', outcomes[0])
 
     def test_help_examples_obey_game_limits(self):
         for game, data in board.dice_sets.items():

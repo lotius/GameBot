@@ -205,16 +205,24 @@ def render_roll(game, counts, outcomes=None):
     rolled = []
     images = {}
     for die_type, count in counts.items():
-        faces = [face['face'] for face in metadata['diceTypes'][die_type]['faces']
-                 for _ in range(face['numOfFaces'])]
+        die = metadata['diceTypes'][die_type]
+        faces = [(face, offset) for face in die['faces']
+                 for offset in range(face['numOfFaces'])]
         for _ in range(count):
-            filename = random.choice(faces)
+            if game == 'rollcolor':
+                filename = random.choice([face['face'] for face, _ in faces])
+                slot = next(i for i, (face, _) in enumerate(faces) if face['face'] == filename)
+            else:
+                slot = random.randint(1, len(faces)) - 1
+            entry, offset = faces[slot]
+            filename = entry['face']
             if outcomes is not None:
-                entry = next(face for face in metadata['diceTypes'][die_type]['faces'] if face['face'] == filename)
                 result = {'dice_type': die_type, 'face_id': entry.get('id', filename), 'values': entry.get('values', {})}
-                mapping = metadata['diceTypes'][die_type].get('dddice')
+                mapping = die.get('dddice')
                 if mapping:
-                    result['dddice'] = dict(mapping, value=entry.get('dddiceValue', faces.index(filename) + 1))
+                    # Explicit values mark the first physical face in this symbol's run.
+                    value = entry['dddiceValue'] + offset if 'dddiceValue' in entry else slot + 1
+                    result['dddice'] = dict(mapping, value=value)
                 outcomes.append(result)
             if filename not in images:
                 path = ROOT / 'images' / metadata['imageDirectory'] / filename

@@ -58,16 +58,20 @@ MentorBot reference. Other game types can opt in by adding to each dice type:
 "dddice": {"type": "d6", "theme": "your-theme-slug"}
 ```
 
-Each face can include `dddiceValue` matching that face's value in the custom
-3D theme and `values` containing numeric outcomes, for example:
+Each face can include `dddiceValue` matching the first physical face in its
+consecutive run in the custom 3D theme and `values` containing numeric outcomes, for example:
 
 ```json
 {"face": "skull.png", "numOfFaces": 3, "dddiceValue": 1,
  "values": {"skulls": 1}}
 ```
 
-The theme's physical face order must match those values. Without an explicit
-value the first weighted slot for the face is used. All results in a roll
+The theme's physical face order must match those values. Each roll selects a
+physical slot, preserving repeated symbols as distinct faces. `dddiceValue`
+plus the offset within that symbol's run is sent; without an explicit value,
+the selected weighted slot (starting at 1) is sent. For example, skulls use
+1, 2, or 3, and white shields use 4 or 5. `rollcolor` keeps its existing
+color selection and does not forward to dddice. All results in a roll
 must have theme mappings; otherwise forwarding reports a failure rather
 than sending incorrect dice. Standard numeric dice currently log statistics
 but have no dddice theme mapping. The original local outcome is sent to
