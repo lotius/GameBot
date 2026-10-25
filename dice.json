@@ -722,6 +722,9 @@
       },
       "flfan": {
         "maxNumberOfDiceType": null,
+        "aliases": [
+          "flf"
+        ],
         "faces": [
           {
             "face": "skull-flfan.png",
