@@ -46,6 +46,39 @@
           "theme": "heroquest-combat-dice-lfftlvf4"
         }
       },
+      "clear": {
+        "maxNumberOfDiceType": null,
+        "faces": [
+          {
+            "face": "skull-clear.png",
+            "numOfFaces": 3,
+            "dddiceValue": 1,
+            "values": {
+              "skulls": 1
+            }
+          },
+          {
+            "face": "whiteshield-clear.png",
+            "numOfFaces": 2,
+            "dddiceValue": 4,
+            "values": {
+              "white_shields": 1
+            }
+          },
+          {
+            "face": "blackshield-clear.png",
+            "numOfFaces": 1,
+            "dddiceValue": 6,
+            "values": {
+              "black_shields": 1
+            }
+          }
+        ],
+        "dddice": {
+          "type": "d6",
+          "theme": "heroquest-clear-combat-dice-mvn5i6i6"
+        }
+      },
       "blue": {
         "maxNumberOfDiceType": null,
         "faces": [
